@@ -41,6 +41,7 @@ PLANT_ICONS = {
     "linde_(tilla_cordata)": "linde_icon.png",
     "mais_(zea_mays)": "mais_icon.png",
     "waldkierfer_(prinus_sylvestris)": "waldkiefer_icon.png",
+    "weissdorn_(crataegus_monogyna)": "weissdorn_icon.png",
 }
 
 
