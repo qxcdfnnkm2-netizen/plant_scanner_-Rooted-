@@ -1144,7 +1144,7 @@ if st.session_state.page == "scan":
 
     st.markdown("""
 <div class="main-card">
-<h3>Discover your plant</h3>
+<h3>Let's discover your plant</h3>
 <p>
 Upload a photo of a plant and the model will try
 to identify the species.
