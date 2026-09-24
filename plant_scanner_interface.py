@@ -1187,7 +1187,7 @@ lighting and make sure the plant is easy to see.
                     with open(MODEL_PATH, "rb") as f:
                          model_hash = hashlib.sha256(f.read()).hexdigest()
 
-                st.write("Model SHA256:", model_hash)
+                    st.write("Model SHA256:", model_hash)
 
                 st.write("Input shape:", img_array.shape) 
                 st.write("Input min:", float(tf.reduce_min(img_array))) 
