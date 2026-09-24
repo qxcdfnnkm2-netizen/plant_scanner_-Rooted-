@@ -1174,9 +1174,9 @@ lighting and make sure the plant is easy to see.
 
         if st.button("Identify Plant", use_container_width=True):
             with st.spinner("Analyzing plant..."):
-                img = image.resize((256, 256))
-                img_array = np.array(img, dtype=np.float32) /255
-                img_array = np.expand_dims(img_array, axis=0)
+                img_array = tf.keras.utils.img_to_array(image) 
+                img_array = tf.image.resize(img_array, (256, 256))
+                img_array = tf.expand_dims(img_array, axis=0)
 
                 predictions = model.predict(img_array, verbose=0)
                 predicted_index = int(np.argmax(predictions[0]))
