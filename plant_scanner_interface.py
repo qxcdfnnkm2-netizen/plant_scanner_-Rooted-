@@ -1175,7 +1175,7 @@ lighting and make sure the plant is easy to see.
         if st.button("Identify Plant", use_container_width=True):
             with st.spinner("Analyzing plant..."):
                 img = image.resize((256, 256))
-                img_array = np.array(img, dtype=np.float32) / 255.0
+                img_array = np.array(img, dtype=np.float32) 
                 img_array = np.expand_dims(img_array, axis=0)
 
                 predictions = model.predict(img_array, verbose=0)
