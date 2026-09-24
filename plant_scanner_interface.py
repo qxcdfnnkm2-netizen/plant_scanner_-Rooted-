@@ -31,6 +31,7 @@ PLANT_ICONS = {
     "birke_(betula_pendula)": "birke_icon.png",
     "bohne_(faba)": "bohne_icon.png",
     "eiche_(quercus)": "eiche_icon.png",
+    "eibe_(taxus_baccata)": "eibe_icon.png",
     "esche_(fraxinus_excelsior)": "esche_icon.png",
     "gemeiner_schneeball_(viburnum_opulus)": "schneeball_icon.png",
     "gerste_(hordeum_vulgare)": "gerste_icon.png",
