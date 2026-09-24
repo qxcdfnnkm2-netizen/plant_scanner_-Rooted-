@@ -1177,7 +1177,10 @@ lighting and make sure the plant is easy to see.
                 img_array = tf.keras.utils.img_to_array(image) 
                 img_array = tf.image.resize(img_array, (256, 256))
                 img_array = tf.expand_dims(img_array, axis=0)
-                st.write("Input shape:", img_array.shape) st.write("Input min:", float(tf.reduce_min(img_array))) st.write("Input max:", float(tf.reduce_max(img_array))) st.write("Input mean:", float(tf.reduce_mean(img_array)))
+                st.write("Input shape:", img_array.shape) 
+                st.write("Input min:", float(tf.reduce_min(img_array))) 
+                st.write("Input max:", float(tf.reduce_max(img_array))) 
+                st.write("Input mean:", float(tf.reduce_mean(img_array)))
 
                 st.write("Model parameters:", model.count_params())
 
