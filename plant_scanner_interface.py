@@ -378,6 +378,12 @@ def load_plant_model():
 
 model = load_plant_model()
 
+import hashlib
+st.write("Model parameters:", model.count_params())
+st.write("MODEL_PATH:", MODEL_PATH)
+st.write("Model file size:", os.path.getsize(MODEL_PATH))
+st.write("Model SHA256:", hashlib.sha256(open(MODEL_PATH, "rb").read()).hexdigest())
+
 
 # ==================================================
 # LOAD CLASS NAMES
@@ -1177,18 +1183,6 @@ lighting and make sure the plant is easy to see.
                 img_array = tf.keras.utils.img_to_array(image) 
                 img_array = tf.image.resize(img_array, (256, 256))
                 img_array = tf.expand_dims(img_array, axis=0)
-                import hashlib
-                st.write("BASE_DIR:", BASE_DIR)
-                st.write("MODEL_PATH:", MODEL_PATH)
-                st.write("Model file exists:", os.path.exists(MODEL_PATH))
-
-                if os.path.exists(MODEL_PATH):
-                    st.write("Model file size:", os.path.getsize(MODEL_PATH))
-                    with open(MODEL_PATH, "rb") as f:
-                         model_hash = hashlib.sha256(f.read()).hexdigest()
-
-                    st.write("Model SHA256:", model_hash)
-
                 st.write("Input shape:", img_array.shape) 
                 st.write("Input min:", float(tf.reduce_min(img_array))) 
                 st.write("Input max:", float(tf.reduce_max(img_array))) 
